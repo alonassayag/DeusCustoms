@@ -17,7 +17,6 @@ When book title is Take the Road
 When price is "45.00" euro
 Then add to shopping cart
 Then I can checkout
-#And empty shopping cart
 Given I am on the shoppingcart page
 And I delete all items
-Then click on continue shopping 
+#Then click on continue shopping 

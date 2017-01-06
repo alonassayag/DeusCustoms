@@ -79,6 +79,7 @@ end
 
 
 
+
 Given(/^add to shopping cart$/) do
 find(:xpath, "//*[@id='add-to-cart']").click
 end
@@ -94,7 +95,8 @@ Given(/^I am on the shoppingcart page$/) do
   find(:xpath, "//*[@id='mainmen']/li[10]/a/span").click
 end
 
-Given(/^I delete all items$/) do
+And(/^I delete all items$/) do
+ find(:xpath, "//*[@id='cartform']/table/tbody/tr[1]/td[5]/a").click
  find(:xpath, "//*[@id='cartform']/table/tbody/tr/td[5]/a").click
 end
 
@@ -103,8 +105,5 @@ Then(/^click on continue shopping$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Given(/^empty shopping cart$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
 
 # EMPTY SHOPPING CART FEATURE          END
