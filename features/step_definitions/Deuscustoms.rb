@@ -1,3 +1,5 @@
+# OPENWEBSHOP FEATURE                  START
+
 Given(/^I go to the Deus website$/) do
  visit 'http://deuscustoms.com/' 
 end
@@ -75,6 +77,8 @@ end
 end
 
 
+
+
 Given(/^add to shopping cart$/) do
 find(:xpath, "//*[@id='add-to-cart']").click
 end
@@ -83,3 +87,24 @@ Then(/^I can checkout$/) do
   find(:xpath, "//*[@id='mainmen']/li[10]/a/span").click
 end
 
+# OPENWEBSHOP FEATURE                  END 
+
+# EMPTY SHOPPING CART FEATURE          START
+Given(/^I am on the shoppingcart page$/) do
+  find(:xpath, "//*[@id='mainmen']/li[10]/a/span").click
+end
+
+Given(/^I delete all items$/) do
+ find(:xpath, "//*[@id='cartform']/table/tbody/tr/td[5]/a").click
+end
+
+
+Then(/^click on continue shopping$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^empty shopping cart$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+# EMPTY SHOPPING CART FEATURE          END

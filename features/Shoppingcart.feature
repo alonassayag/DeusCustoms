@@ -5,7 +5,6 @@ When I click the button webshop
 Then I should select Europe
 
 Given I am on the webshop of Deus
-And empty shopping cart 
 And I select one tshirt from tees
 And I select a Tshirt 
 And I select Small 
@@ -18,3 +17,7 @@ When book title is Take the Road
 When price is "45.00" euro
 Then add to shopping cart
 Then I can checkout
+#And empty shopping cart
+Given I am on the shoppingcart page
+And I delete all items
+Then click on continue shopping 
